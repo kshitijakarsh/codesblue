@@ -1,4 +1,5 @@
 import About from "@/components/sections/about";
+import Certification from "@/components/sections/certification";
 import Features from "@/components/sections/features";
 import Hero from "@/components/sections/hero";
 import Navbar from "@/components/sections/navbar";
@@ -12,6 +13,7 @@ export default function Home() {
       <Features/>
       <Services/>
       <About/>
+      <Certification/>
     </>
   );
 }

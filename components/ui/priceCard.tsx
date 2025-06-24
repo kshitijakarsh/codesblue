@@ -21,7 +21,7 @@ export default function PriceCard() {
           <h1 className="border-b border-gray-400 pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
             04 Value Proposition
           </h1>
-          <h1 className="border-b border-gray-400 pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
+          <h1 className="pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
             05 CRO
           </h1>
         </div>
@@ -47,7 +47,7 @@ export default function PriceCard() {
           <h1 className="border-b border-gray-100 pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
             04 Functionality
           </h1>
-          <h1 className="border-b border-gray-100 pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
+          <h1 className="pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
             05 Optimization
           </h1>
         </div>
@@ -73,7 +73,7 @@ export default function PriceCard() {
           <h1 className="border-b border-gray-400 pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
             04 On-Page
           </h1>
-          <h1 className="border-b border-gray-400 pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
+          <h1 className="pb-1 hover:text-yellow-300 transition duration-200 cursor-pointer">
             05 Technical
           </h1>
         </div>
