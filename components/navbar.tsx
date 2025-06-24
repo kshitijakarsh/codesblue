@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <header className="flex items-center justify-between px-10 py-3 border-b bg-[#1F2B68] text-white">
+    <header className="flex items-center justify-between px-10 py-3 bg-[#1F2B68] text-white">
       <div className="text-lg font-semibold">CodesBlue</div>
 
       <nav className="flex gap-10 text-sm">
