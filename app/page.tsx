@@ -3,6 +3,7 @@ import Certification from "@/components/sections/certification";
 import Features from "@/components/sections/features";
 import Hero from "@/components/sections/hero";
 import Navbar from "@/components/sections/navbar";
+import Projects from "@/components/sections/projects";
 import Services from "@/components/sections/services";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Services/>
       <About/>
       <Certification/>
+      <Projects/>
     </>
   );
 }
