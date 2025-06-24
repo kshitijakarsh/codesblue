@@ -5,8 +5,11 @@ export default function Hero() {
         <h1>
           We develop the <span className="text-orange-400">eye</span>
         </h1>
-        <h1>
-          <span className="text-orange-400">catching</span> brands
+        <h1 className="flex">
+          <span className="mt-7">
+            <img src="arrow.svg" alt="arrow" />
+          </span>
+          <span className="text-orange-400 ml-4 mr-4">  catching </span> brands
         </h1>
       </div>
 
@@ -35,7 +38,7 @@ export default function Hero() {
       </div>
 
       <div className="mt-50">
-        <img src="./brands.svg" alt="brands"className="w-[540px] h-[50px]"/>
+        <img src="./brands.svg" alt="brands" className="w-[540px] h-[50px]" />
       </div>
     </div>
   );
