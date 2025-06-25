@@ -20,10 +20,42 @@ export default function Testimonials() {
               <h1>The Walt Disney Company</h1>
             </div>
           </div>
-          <div>
-            <h1 className="text-8xl">"</h1>
-            <div>
-                
+          <div className="flex items-center justify-center min-h-screen ml-10">
+            <div className="text-center">
+              <h1 className="text-9xl text-white mb-6">"</h1>
+              <div className="flex gap-10 justify-center mt-60 pb-16 text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="cursor-pointer transition-transform duration-200 ease-in-out hover:-translate-x-1 hover:scale-110"
+                >
+                  <path d="M6 8L2 12L6 16" />
+                  <path d="M2 12H22" />
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="cursor-pointer transition-transform duration-200 ease-in-out hover:translate-x-1 hover:scale-110"
+                >
+                  <path d="M18 8L22 12L18 16" />
+                  <path d="M2 12H22" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
