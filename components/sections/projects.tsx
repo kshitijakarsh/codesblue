@@ -1,17 +1,25 @@
 export default function Projects() {
   return (
-    <div className=" bg-[#1F2B68] py-20 px-4">
+    <div className="bg-[#1F2B68] py-20 px-4">
       <div className="max-w-[660px] mx-auto text-6xl text-center text-white leading-tight">
         <h1>Comprised of diverse minds</h1>
       </div>
 
-      <div className="mt-16 w-full px-6 flex justify-center">
-        <div className="grid grid-cols-2 gap-[40px] items-start">
-          <div className="w-[646px] h-[508px]">
-            <img src="./gemini.svg" alt="project1" />
+      <div className="mt-16 flex justify-center items-center">
+        <div className="flex gap-4 items-start">
+          <div className="flex-shrink-0">
+            <img 
+              src="./gemini.svg" 
+              alt="project1" 
+              className="w-full h-auto max-w-[646px] max-h-[508px] object-contain"
+            />
           </div>
-          <div className="w-[484px] h-[508px]">
-            <img src="./silv.svg" alt="project2" />
+          <div className="flex-shrink-0">
+            <img 
+              src="./silv.svg" 
+              alt="project2" 
+              className="w-full h-auto max-w-[484px] max-h-[508px] object-contain"
+            />
           </div>
         </div>
       </div>
