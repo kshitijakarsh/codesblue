@@ -101,6 +101,11 @@ export default function Projects() {
           </div>
         </div>
       </div>
+
+
+      <div className="text-center pt-15">
+        <button className="py-4 px-6 rounded-xl bg-gradient-to-r from-[#FF9A63] to-[#FE804B] text-white transition-transform transform duration-200 hover:scale-105">See all Projects</button>
+      </div>
     </div>
   );
 }
