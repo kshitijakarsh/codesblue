@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function Projects() {
   return (
     <div className="bg-[#1F2B68] py-20 px-4">
@@ -7,29 +10,43 @@ export default function Projects() {
 
       <div className="mt-16 flex justify-center items-center">
         <div className="flex gap-4 items-start">
-          <div className="flex-shrink-0">
+          <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <img
               src="./gemini.svg"
               alt="project1"
               className="w-full h-auto max-w-[646px] max-h-[508px] object-contain"
             />
-
             <h1 className="text-white text-2xl font-bold mt-5">
               GEMINI SKINCARE
             </h1>
             <div className="flex flex-wrap gap-3 mt-4">
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                Copywriting
-              </h1>
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                Brand Content
-              </h1>
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                E-Commerce
-              </h1>
+              {["Copywriting", "Brand Content", "E-Commerce"].map((tag, i) => (
+                <motion.h1
+                  key={i}
+                  className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200"
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {tag}
+                </motion.h1>
+              ))}
             </div>
-          </div>
-          <div className="flex-shrink-0">
+          </motion.div>
+
+          {/* Silv */}
+          <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <img
               src="./silv.svg"
               alt="project2"
@@ -39,46 +56,59 @@ export default function Projects() {
               SILV PEANUT BUTTER
             </h1>
             <div className="flex flex-wrap gap-3 mt-4">
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                Copywriting
-              </h1>
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                Brand Content
-              </h1>
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                E-Commerce
-              </h1>
+              {["Copywriting", "Brand Content", "E-Commerce"].map((tag, i) => (
+                <motion.h1
+                  key={i}
+                  className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200"
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {tag}
+                </motion.h1>
+              ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       <div className="mt-16 flex justify-center items-center">
         <div className="flex gap-4 items-start">
-          <div className="flex-shrink-0">
+          <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <img
               src="./pizza.svg"
               alt="project1"
               className="w-full h-auto max-w-[484px] max-h-[508px] object-contain"
             />
-
             <h1 className="text-white text-2xl font-bold mt-5">
               GOODROOT PIZZA
             </h1>
             <div className="flex flex-wrap gap-3 mt-4">
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                Copywriting
-              </h1>
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                Brand Content
-              </h1>
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                E-Commerce
-              </h1>
+              {["Copywriting", "Brand Content", "E-Commerce"].map((tag, i) => (
+                <motion.h1
+                  key={i}
+                  className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200"
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {tag}
+                </motion.h1>
+              ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex-shrink-0">
+          <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             <img
               src="./olipop.svg"
               alt="project2"
@@ -88,23 +118,29 @@ export default function Projects() {
               OLIPOP DRINKS
             </h1>
             <div className="flex flex-wrap gap-3 mt-4">
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                Copywriting
-              </h1>
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                Brand Content
-              </h1>
-              <h1 className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200 transition-transform transform duration-200 hover:scale-105">
-                E-Commerce
-              </h1>
+              {["Copywriting", "Brand Content", "E-Commerce"].map((tag, i) => (
+                <motion.h1
+                  key={i}
+                  className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200"
+                  whileHover={{ scale: 1.08 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {tag}
+                </motion.h1>
+              ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-
-      <div className="text-center pt-15">
-        <button className="py-4 px-6 rounded-xl bg-gradient-to-r from-[#FF9A63] to-[#FE804B] text-white transition-transform transform duration-200 hover:scale-105">See all Projects</button>
+      <div className="text-center pt-15 mt-12">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.98 }}
+          className="py-4 px-6 rounded-xl bg-gradient-to-r from-[#FF9A63] to-[#FE804B] text-white transition-transform duration-200"
+        >
+          See all Projects
+        </motion.button>
       </div>
     </div>
   );
