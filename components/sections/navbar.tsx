@@ -9,7 +9,6 @@ export default function Navbar() {
       <div className="flex items-center justify-between">
         <div className="text-xl font-semibold">CodesBlue</div>
 
-        {/* Hamburger Icon (Mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden focus:outline-none"
@@ -39,7 +38,6 @@ export default function Navbar() {
           </svg>
         </button>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex gap-10 text-sm">
           {["Pricing", "Success", "Stories", "About Us", "Company"].map((item) => (
             <a
@@ -52,7 +50,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop Button */}
         <div className="hidden md:block">
           <button
             className="border border-white px-3 py-1 rounded-xl bg-[#253783] text-white transform transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg hover:bg-[#2d4194]"
@@ -62,7 +59,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
       {isOpen && (
         <div className="flex flex-col mt-4 space-y-3 md:hidden">
           {["Pricing", "Success", "Stories", "About Us", "Company"].map((item) => (

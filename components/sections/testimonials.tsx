@@ -25,102 +25,176 @@ const testimonials = [
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
-
-  const next = () => {
-    setIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prev = () => {
+  const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
+  const prev = () =>
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   const testimonial = testimonials[index];
 
   return (
-    <div className="bg-[#1F2B68] w-full flex justify-center items-center py-20 px-4">
-      <div className="bg-gradient-to-r from-[#FF9A63] to-[#FE804B] w-full max-w-[1170px] rounded-[40px] border-[6px] border-white px-6 py-12">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
-          {/* Text content */}
-          <div className="w-full max-w-[674px]">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.4 }}
-              >
-                <h1 className="text-3xl sm:text-4xl lg:text-6xl text-white font-bold leading-tight">
-                  Passion for creating digital experiences
-                </h1>
-                <p className="text-lg sm:text-xl lg:text-3xl text-white mt-10 lg:mt-20">
-                  {testimonial.quote}
-                </p>
-                <div className="mt-10 lg:mt-20 text-white">
-                  <h1>{testimonial.name}</h1>
-                  <h1>{testimonial.company}</h1>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+    <div className="bg-[#1F2B68] py-20 px-4 flex justify-center items-center">
+      <div className="w-full max-w-[1170px]">
+        <div className="hidden lg:flex bg-gradient-to-r from-[#FF9A63] to-[#FE804B] rounded-[40px] border-[6px] border-white px-6 py-12">
+          <div className="flex ml-24 mt-20 gap-10">
+            <div className="w-[674px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={testimonial.name}
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -40 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <h1 className="text-6xl text-white font-bold">
+                    Passion for creating digital experiences
+                  </h1>
+                  <p className="text-3xl text-white mt-20">
+                    {testimonial.quote}
+                  </p>
+                  <div className="mt-20 text-white">
+                    <h1>{testimonial.name}</h1>
+                    <h1>{testimonial.company}</h1>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
-          {/* Quote Icon & Controls */}
-          <div className="flex flex-col items-center justify-center mt-10 lg:mt-40 text-white">
+            <div className="flex items-center justify-center ml-10">
+              <div className="flex flex-col justify-between items-center h-full text-white mt-40">
+                <motion.svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-quote-icon"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ repeat: Infinity, duration: 4 }}
+                >
+                  <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                  <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                </motion.svg>
+
+                <div className="flex gap-10 justify-center mt-40 pb-10">
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="cursor-pointer"
+                    whileHover={{ x: -4, scale: 1.1 }}
+                    onClick={prev}
+                  >
+                    <path d="M6 8L2 12L6 16" />
+                    <path d="M2 12H22" />
+                  </motion.svg>
+
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="cursor-pointer"
+                    whileHover={{ x: 4, scale: 1.1 }}
+                    onClick={next}
+                  >
+                    <path d="M18 8L22 12L18 16" />
+                    <path d="M2 12H22" />
+                  </motion.svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="lg:hidden bg-gradient-to-r from-[#FF9A63] to-[#FE804B] rounded-[40px] border-[6px] border-white px-6 py-10 flex flex-col items-center text-white relative">
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="60"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="absolute top-6 right-6"
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ repeat: Infinity, duration: 4 }}
+          >
+            <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+            <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+          </motion.svg>
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={testimonial.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="text-center mt-15"
+            >
+              <h1 className="text-3xl font-bold mb-6">
+                Passion for creating digital experiences
+              </h1>
+              <p className="text-base mb-6 px-2">{testimonial.quote}</p>
+              <div className="text-sm">
+                <h1>{testimonial.name}</h1>
+                <h1>{testimonial.company}</h1>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          <div className="flex gap-10 justify-center mt-10">
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
-              width="80"
-              height="80"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-quote-icon"
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ repeat: Infinity, duration: 4 }}
+              className="cursor-pointer"
+              whileHover={{ x: -4, scale: 1.1 }}
+              onClick={prev}
             >
-              <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
-              <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+              <path d="M6 8L2 12L6 16" />
+              <path d="M2 12H22" />
             </motion.svg>
 
-            <div className="flex gap-10 justify-center mt-10 lg:mt-40 pb-4">
-              <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="cursor-pointer"
-                whileHover={{ x: -4, scale: 1.1 }}
-                onClick={prev}
-              >
-                <path d="M6 8L2 12L6 16" />
-                <path d="M2 12H22" />
-              </motion.svg>
-
-              <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="cursor-pointer"
-                whileHover={{ x: 4, scale: 1.1 }}
-                onClick={next}
-              >
-                <path d="M18 8L22 12L18 16" />
-                <path d="M2 12H22" />
-              </motion.svg>
-            </div>
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="cursor-pointer"
+              whileHover={{ x: 4, scale: 1.1 }}
+              onClick={next}
+            >
+              <path d="M18 8L22 12L18 16" />
+              <path d="M2 12H22" />
+            </motion.svg>
           </div>
         </div>
       </div>
