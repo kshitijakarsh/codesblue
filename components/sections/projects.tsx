@@ -39,7 +39,6 @@ export default function Projects() {
             </div>
           </motion.div>
 
-          {/* Silv */}
           <motion.div
             className="flex-shrink-0"
             initial={{ opacity: 0, y: 50 }}

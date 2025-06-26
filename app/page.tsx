@@ -3,6 +3,7 @@ import Certification from "@/components/sections/certification";
 import Cta from "@/components/sections/cta";
 import Faq from "@/components/sections/faq";
 import Features from "@/components/sections/features";
+import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import Navbar from "@/components/sections/navbar";
 import Projects from "@/components/sections/projects";
@@ -22,6 +23,7 @@ export default function Home() {
       <Testimonials />
       <Cta />
       <Faq />
+      <Footer/>
     </>
   );
 }

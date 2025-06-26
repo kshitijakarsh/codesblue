@@ -40,7 +40,6 @@ export default function Testimonials() {
     <div className="bg-[#1F2B68] w-full flex justify-center items-center py-20">
       <div className="bg-gradient-to-r from-[#FF9A63] to-[#FE804B] w-[1170px] h-[680px] rounded-[40px] border-[6px] border-white">
         <div className="flex ml-24 mt-20">
-          {/* Left Section */}
           <div className="w-[674px] h-[136px]">
             <AnimatePresence mode="wait">
               <motion.div
@@ -62,10 +61,8 @@ export default function Testimonials() {
             </AnimatePresence>
           </div>
 
-          {/* Right Section */}
           <div className="flex items-center justify-center ml-10">
             <div className="flex flex-col justify-between items-center h-full text-white mt-40">
-              {/* Quote Icon */}
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="100"
@@ -84,7 +81,6 @@ export default function Testimonials() {
                 <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
               </motion.svg>
 
-              {/* Navigation Buttons */}
               <div className="flex gap-10 justify-center mt-40 pb-10">
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg"
