@@ -8,10 +8,12 @@ export default function Footer() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="text-right pb-6 mb-16 border-b border-white/30 "
+        className="text-center md:text-right pb-6 mb-16 border-b border-white/30"
       >
-        <span className="text-lg mr-8">Send us email at</span>
-        <button className="bg-gradient-to-r from-[#FF9A63] to-[#FE804B] px-4 py-1 rounded-xl transition-transform transform duration-200 hover:scale-105">
+        <span className="text-lg block md:inline mr-0 md:mr-8 mb-3 md:mb-0">
+          Send us email at
+        </span>
+        <button className="bg-gradient-to-r from-[#FF9A63] to-[#FE804B] px-4 py-1 rounded-xl transition-transform transform duration-200 hover:scale-105 mt-3 md:mt-0">
           example@gmail.com
         </button>
       </motion.div>

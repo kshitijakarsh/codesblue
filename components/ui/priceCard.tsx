@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export default function PriceCard() {
   return (
-    <div className="flex justify-center items-end bg-[#1F2B68] gap-6 py-24">
+    <div className="flex flex-wrap justify-center items-end bg-[#1F2B68] gap-6 px-4 py-24">
       <motion.div
-        className="w-[374px] h-[372px] bg-[#183282] border border-white rounded-2xl p-6 text-white flex flex-col justify-between shadow-lg"
+        className="w-full sm:w-[374px] h-auto bg-[#183282] border border-white rounded-2xl p-6 text-white flex flex-col justify-between shadow-lg"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -37,7 +37,7 @@ export default function PriceCard() {
       </motion.div>
 
       <motion.div
-        className="w-[374px] h-[432px] bg-gradient-to-b from-[#7796FD] to-[#4958CC] border border-white rounded-2xl p-6 flex flex-col justify-between shadow-lg text-white"
+        className="w-full sm:w-[374px] h-auto bg-gradient-to-b from-[#7796FD] to-[#4958CC] border border-white rounded-2xl p-6 flex flex-col justify-between shadow-lg text-white"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -68,7 +68,7 @@ export default function PriceCard() {
       </motion.div>
 
       <motion.div
-        className="w-[374px] h-[372px] bg-[#183282] border border-white rounded-2xl p-6 flex flex-col justify-between shadow-lg text-white"
+        className="w-full sm:w-[374px] h-auto bg-[#183282] border border-white rounded-2xl p-6 flex flex-col justify-between shadow-lg text-white"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}

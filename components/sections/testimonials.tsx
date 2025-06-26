@@ -37,10 +37,11 @@ export default function Testimonials() {
   const testimonial = testimonials[index];
 
   return (
-    <div className="bg-[#1F2B68] w-full flex justify-center items-center py-20">
-      <div className="bg-gradient-to-r from-[#FF9A63] to-[#FE804B] w-[1170px] h-[680px] rounded-[40px] border-[6px] border-white">
-        <div className="flex ml-24 mt-20">
-          <div className="w-[674px] h-[136px]">
+    <div className="bg-[#1F2B68] w-full flex justify-center items-center py-20 px-4">
+      <div className="bg-gradient-to-r from-[#FF9A63] to-[#FE804B] w-full max-w-[1170px] rounded-[40px] border-[6px] border-white px-6 py-12">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10">
+          {/* Text content */}
+          <div className="w-full max-w-[674px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={testimonial.name}
@@ -49,11 +50,13 @@ export default function Testimonials() {
                 exit={{ opacity: 0, x: -40 }}
                 transition={{ duration: 0.4 }}
               >
-                <h1 className="text-6xl text-white font-bold">
+                <h1 className="text-3xl sm:text-4xl lg:text-6xl text-white font-bold leading-tight">
                   Passion for creating digital experiences
                 </h1>
-                <p className="text-3xl text-white mt-20">{testimonial.quote}</p>
-                <div className="mt-20 text-white">
+                <p className="text-lg sm:text-xl lg:text-3xl text-white mt-10 lg:mt-20">
+                  {testimonial.quote}
+                </p>
+                <div className="mt-10 lg:mt-20 text-white">
                   <h1>{testimonial.name}</h1>
                   <h1>{testimonial.company}</h1>
                 </div>
@@ -61,63 +64,62 @@ export default function Testimonials() {
             </AnimatePresence>
           </div>
 
-          <div className="flex items-center justify-center ml-10">
-            <div className="flex flex-col justify-between items-center h-full text-white mt-40">
+          {/* Quote Icon & Controls */}
+          <div className="flex flex-col items-center justify-center mt-10 lg:mt-40 text-white">
+            <motion.svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="80"
+              height="80"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-quote-icon"
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ repeat: Infinity, duration: 4 }}
+            >
+              <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+              <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+            </motion.svg>
+
+            <div className="flex gap-10 justify-center mt-10 lg:mt-40 pb-4">
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="100"
+                width="32"
+                height="32"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide lucide-quote-icon"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ repeat: Infinity, duration: 4 }}
+                className="cursor-pointer"
+                whileHover={{ x: -4, scale: 1.1 }}
+                onClick={prev}
               >
-                <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
-                <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
+                <path d="M6 8L2 12L6 16" />
+                <path d="M2 12H22" />
               </motion.svg>
 
-              <div className="flex gap-10 justify-center mt-40 pb-10">
-                <motion.svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="cursor-pointer"
-                  whileHover={{ x: -4, scale: 1.1 }}
-                  onClick={prev}
-                >
-                  <path d="M6 8L2 12L6 16" />
-                  <path d="M2 12H22" />
-                </motion.svg>
-
-                <motion.svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="cursor-pointer"
-                  whileHover={{ x: 4, scale: 1.1 }}
-                  onClick={next}
-                >
-                  <path d="M18 8L22 12L18 16" />
-                  <path d="M2 12H22" />
-                </motion.svg>
-              </div>
+              <motion.svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="cursor-pointer"
+                whileHover={{ x: 4, scale: 1.1 }}
+                onClick={next}
+              >
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
+              </motion.svg>
             </div>
           </div>
         </div>

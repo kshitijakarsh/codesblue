@@ -38,21 +38,25 @@ export default function Faq() {
   };
 
   return (
-    <div className="w-full bg-[#1F2B68] py-20 px-10">
-      <div className="flex justify-center gap-16 max-w-7xl mx-auto flex-wrap">
+    <div className="w-full bg-[#1F2B68] py-20 px-6">
+      <div className="flex flex-col md:flex-row justify-center gap-16 max-w-7xl mx-auto flex-wrap">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="w-[476px] mt-10"
+          className="w-full md:max-w-[476px] mt-10 text-center md:text-left"
         >
-          <h2 className="text-5xl font-semibold text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl font-semibold text-white leading-tight">
             Frequently Asked <br /> Questions
           </h2>
-          <img src="./faq.svg" alt="faq_image" className="mt-20 w-[295px]" />
+          <img
+            src="./faq.svg"
+            alt="faq_image"
+            className="mt-12 mx-auto md:mx-0 w-[200px] md:w-[295px]"
+          />
         </motion.div>
 
-        <div className="w-[575px]">
+        <div className="w-full md:max-w-[575px]">
           {mockFaqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -65,7 +69,9 @@ export default function Faq() {
                 onClick={() => toggle(index)}
                 className="flex justify-between items-center w-full text-left hover:opacity-90 transition"
               >
-                <h3 className="text-xl font-medium">{faq.question}</h3>
+                <h3 className="text-lg md:text-xl font-medium">
+                  {faq.question}
+                </h3>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
@@ -108,7 +114,7 @@ export default function Faq() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="w-[420px] text-white/60 pt-10"
+            className="pt-10 text-white/60 text-base md:w-[420px]"
           >
             Frankly, it's the best in the business and we'll back that up with
             references from our clients. Our trainers and operations teams offer

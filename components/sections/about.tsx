@@ -1,16 +1,16 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 function Counter({ end }: { end: number | string }) {
   const [count, setCount] = useState(0);
-  const controls = useAnimation();
 
   useEffect(() => {
     let start = 0;
-    const target = typeof end === "string" && end.includes("K")
-      ? parseInt(end) * 1000
-      : parseInt(end.toString());
+    const target =
+      typeof end === "string" && end.includes("K")
+        ? parseInt(end) * 1000
+        : parseInt(end.toString());
 
     const step = Math.ceil(target / 60);
 
@@ -27,68 +27,73 @@ function Counter({ end }: { end: number | string }) {
     return () => clearInterval(interval);
   }, [end]);
 
-  const display = typeof end === "string" && end.includes("K") ? `${Math.round(count / 1000)}K+` : count;
+  const display =
+    typeof end === "string" && end.includes("K")
+      ? `${Math.round(count / 1000)}K+`
+      : count;
 
-  return <h1 className="text-7xl font-bold">{display}</h1>;
+  return <h1 className="text-5xl md:text-7xl font-bold">{display}</h1>;
 }
 
 export default function About() {
   return (
-    <div className="bg-[#1F2B68] py-16">
+    <div className="bg-[#1F2B68] py-16 px-4">
       <motion.div
-        className="flex justify-center text-center text-5xl text-white"
+        className="flex justify-center text-center text-white text-3xl md:text-5xl"
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="w-[594px]">
+        <div className="max-w-[594px]">
           <h1>Strategic design over the years</h1>
         </div>
       </motion.div>
 
-      <div className="flex justify-center items-end gap-6 mt-20 text-[#183282]">
+      <div className="flex flex-wrap justify-center gap-6 mt-16 text-[#183282]">
         <motion.div
-          className="w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
+          className="w-full max-w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <Counter end={400} />
-          <p className="text-xl mt-2 w-[200px] text-center">
+          <p className="text-lg mt-2 w-[200px]">
             Talented people ready to bring your vision
           </p>
         </motion.div>
 
         <motion.div
-          className="w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
+          className="w-full max-w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Counter end={15} />
-          <p className="text-xl mt-2 w-[200px]">
+          <p className="text-lg mt-2 w-[200px]">
             Years of experience working with tech
           </p>
         </motion.div>
 
         <motion.div
-          className="w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
+          className="w-full max-w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Counter end={40} />
-          <p className="text-xl mt-2 w-[200px]">Offices in the United States</p>
+          <p className="text-lg mt-2 w-[200px]">Offices in the United States</p>
         </motion.div>
 
         <motion.div
-          className="w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
+          className="w-full max-w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Counter end={"3K+"} />
-          <p className="text-xl mt-2 w-[200px]">Pixel perfect projects designed</p>
+          <p className="text-lg mt-2 w-[200px]">
+            Pixel perfect projects designed
+          </p>
         </motion.div>
       </div>
     </div>

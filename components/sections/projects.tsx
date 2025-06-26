@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 export default function Projects() {
   return (
     <div className="bg-[#1F2B68] py-20 px-4">
-      <div className="max-w-[660px] mx-auto text-6xl text-center text-white leading-tight">
+      <div className="max-w-[660px] mx-auto text-4xl md:text-6xl text-center text-white leading-tight px-2">
         <h1>Comprised of diverse minds</h1>
       </div>
 
       <div className="mt-16 flex justify-center items-center">
-        <div className="flex gap-4 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-4 items-start">
           <motion.div
             className="flex-shrink-0"
             initial={{ opacity: 0, y: 50 }}
@@ -71,7 +71,7 @@ export default function Projects() {
       </div>
 
       <div className="mt-16 flex justify-center items-center">
-        <div className="flex gap-4 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-4 items-start">
           <motion.div
             className="flex-shrink-0"
             initial={{ opacity: 0, y: 50 }}
