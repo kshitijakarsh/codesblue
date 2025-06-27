@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -37,17 +38,21 @@ export default function Footer() {
           className="flex flex-col"
         >
           <h1 className="text-xl font-semibold mb-5">Services</h1>
-          {["Home", "About", "Services", "Projects", "Contact"].map(
-            (item, i) => (
-              <a
-                key={i}
-                href="/"
-                className="mb-3 hover:text-orange-300 transition"
-              >
-                {item}
-              </a>
-            )
-          )}
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Home
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            About
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Services
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Projects
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Contact
+          </Link>
         </motion.div>
 
         <motion.div
@@ -57,17 +62,18 @@ export default function Footer() {
           className="flex flex-col"
         >
           <h1 className="text-xl font-semibold mb-5">Web Design</h1>
-          {["E-commerce", "SEO", "Digital Marketing", "Projects"].map(
-            (item, i) => (
-              <a
-                key={i}
-                href="/"
-                className="mb-3 hover:text-orange-300 transition"
-              >
-                {item}
-              </a>
-            )
-          )}
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            E-commerce
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            SEO
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Digital Marketing
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Projects
+          </Link>
         </motion.div>
 
         <motion.div
@@ -77,17 +83,21 @@ export default function Footer() {
           className="flex flex-col"
         >
           <h1 className="text-xl font-semibold mb-5">Development</h1>
-          {["Services", "Shopify", "Projects", "About Us", "Contact"].map(
-            (item, i) => (
-              <a
-                key={i}
-                href="/"
-                className="mb-3 hover:text-orange-300 transition"
-              >
-                {item}
-              </a>
-            )
-          )}
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Services
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Shopify
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Projects
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            About Us
+          </Link>
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+            Contact
+          </Link>
         </motion.div>
 
         <motion.div
@@ -97,24 +107,24 @@ export default function Footer() {
           className="flex flex-col"
         >
           <h1 className="text-xl font-semibold mb-5">An Odd Bunch</h1>
-          <a href="/" className="mb-3 hover:text-orange-300 transition">
+          <Link href="/" className="mb-3 hover:text-orange-300 transition">
             Cayman
-          </a>
-          <a href="/" className="hover:text-orange-300 transition">
+          </Link>
+          <Link href="/" className="hover:text-orange-300 transition">
             Australia
-          </a>
+          </Link>
         </motion.div>
       </div>
 
       <div className="mt-20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
         <p>© 2025 Your Company. All rights reserved.</p>
         <div className="flex gap-6">
-          <a href="/" className="hover:text-white transition">
+          <Link href="/" className="hover:text-white transition">
             Terms & Services
-          </a>
-          <a href="/" className="hover:text-white transition">
+          </Link>
+          <Link href="/" className="hover:text-white transition">
             Privacy Policy
-          </a>
+          </Link>
         </div>
       </div>
     </div>
