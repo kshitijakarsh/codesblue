@@ -6,6 +6,7 @@ import Features from "@/components/sections/features";
 import Footer from "@/components/sections/footer";
 import Hero from "@/components/sections/hero";
 import Navbar from "@/components/sections/navbar";
+import Apps from "@/components/sections/apps";
 import Projects from "@/components/sections/projects";
 import Services from "@/components/sections/services";
 import Testimonials from "@/components/sections/testimonials";
@@ -19,11 +20,12 @@ export default function Home() {
       <Services />
       <About />
       <Certification />
+      <Apps />
       <Projects />
       <Testimonials />
       <Cta />
       <Faq />
-      <Footer/>
+      <Footer />
     </>
   );
 }
