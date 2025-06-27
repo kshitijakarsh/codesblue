@@ -45,7 +45,9 @@ export default function About() {
         transition={{ duration: 0.6 }}
       >
         <div className="max-w-[594px] font-semibold">
-          <h1 className="text-[58px]">Strategic design over the years</h1>
+          <h1 className="text-[38px] md:text-[58px]">
+            Strategic design over the years
+          </h1>
         </div>
       </motion.div>
 
