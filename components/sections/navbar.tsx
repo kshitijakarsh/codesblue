@@ -52,7 +52,7 @@ export default function Navbar() {
 
         <div className="hidden md:block">
           <button
-            className="border border-white px-3 py-1 rounded-xl bg-[#253783] text-white transform transition-transform duration-300 ease-out hover:scale-110 hover:shadow-lg hover:bg-[#2d4194]"
+            className="border border-white px-3 py-1 rounded-xl bg-gradient-to-r from-[#FF9A63] to-[#FE804B] text-white transform transition-transform duration-300 ease-out hover:scale-110"
           >
             Contact Us
           </button>
@@ -71,7 +71,7 @@ export default function Navbar() {
             </a>
           ))}
           <button
-            className="mt-2 border border-white px-3 py-1 rounded-xl bg-[#253783] text-white transform transition-transform duration-300 ease-out hover:scale-105 hover:shadow-md hover:bg-[#2d4194]"
+            className="mt-2 border border-white px-3 py-1 rounded-xl bg-gradient-to-r from-[#FF9A63] to-[#FE804B] text-white transform transition-transform duration-300 ease-out hover:scale-105 "
           >
             Contact Us
           </button>

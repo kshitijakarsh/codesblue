@@ -3,43 +3,36 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div className="relative bg-[#1F2B68] text-white min-h-[100vh] px-4 sm:px-6 md:pl-28 overflow-hidden font-sans">
+    <div className="relative bg-[#1F2B68] text-white min-h-screen px-4 sm:px-6 md:pl-28 overflow-hidden font-sans">
       <motion.div
         className="pt-20 md:pt-28 w-full"
-        initial={{ opacity: 0, y: -40 }}
+        initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
         <motion.div
-          className="block md:hidden mb-2"
-          initial={{ x: -10, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          className="mb-4"
+          initial={{ y: -10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
-          <img src="arrow.svg" alt="arrow" className="w-10" />
+          <img src="arrow.svg" alt="arrow" className="w-18" />
         </motion.div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-8xl xl:text-[7rem] font-semibold leading-[0.7] flex flex-wrap md:flex-col md:items-start">
-          <span className="hidden md:inline">
-            We develop the <span className="text-orange-400">eye</span>
+        <h1 className="hidden md:block font-semibold text-[52px] lg:text-[80px] xl:text-[88px] leading-[1.1] max-w-5xl">
+          <span>
+            Your <span className="text-orange-400">Brand</span>, Reimagined
           </span>
-          <span className="hidden md:flex items-center mt-2 md:mt-6">
-            <motion.span
-              className="mt-6"
-              initial={{ x: -10, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ type: "spring", stiffness: 120, delay: 0.3 }}
-            >
-              <img src="arrow.svg" alt="arrow" />
-            </motion.span>
-            <span className="text-orange-400 ml-4 mr-4">catching</span>
-            <span>brands</span>
+          <br />
+          <span>
+            For <span className="text-orange-400">Digital Impact</span>
           </span>
+        </h1>
 
-          <span className="md:hidden">
-            We develop the <span className="text-orange-400">eye</span> catching
-            brands
-          </span>
+        <h1 className="md:hidden block text-[34px] sm:text-[42px] font-semibold leading-[1.2]">
+          Your <span className="text-orange-400">Brand</span>, Reimagined
+          <br />
+          For <span className="text-orange-400">Digital Impact</span>
         </h1>
       </motion.div>
 
@@ -48,9 +41,9 @@ export default function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
       >
-        <p className="max-w-full sm:max-w-[480px] mt-6 sm:mt-10 text-base sm:text-lg md:text-[21px] leading-relaxed font-normal">
-          Empower your franchises and locations to grow with our intelligent
-          dashboards and tools.
+        <p className="max-w-full sm:max-w-[480px] mt-6 sm:mt-10 text-base sm:text-lg md:text-[20px] leading-relaxed font-normal">
+          Experience bespoke web development and captivating design that
+          elevates your brand and drives genuine online growth.
         </p>
       </motion.div>
 
@@ -61,12 +54,10 @@ export default function Hero() {
         transition={{ duration: 0.4, delay: 0.8 }}
       >
         <button
-          className="
-            bg-white text-black px-6 py-3 text-base sm:text-lg md:text-xl rounded-xl 
+          className="bg-white text-black px-6 py-3 text-base sm:text-lg md:text-xl rounded-xl 
             shadow-[inset_0_-4px_0_rgba(0,0,0,0.2),0_8px_0_0_rgba(0,0,0,0.2)]
             active:translate-y-[4px] active:shadow-[inset_0_-2px_0_rgba(0,0,0,0.2)]
-            transition-all duration-150 font-semibold
-          "
+            transition-all duration-150 font-semibold"
         >
           Contact Us
         </button>
@@ -94,7 +85,7 @@ export default function Hero() {
         <img
           src="./brands.svg"
           alt="brands"
-          className="w-full max-w-[280px] sm:max-w-[400px] h-auto"
+          className="w-full max-w-[300px] sm:max-w-[400px] h-auto"
         />
       </motion.div>
 

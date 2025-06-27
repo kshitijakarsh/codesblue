@@ -10,11 +10,10 @@ export default function Features() {
         transition={{ duration: 0.6 }}
       >
         <h1 className="text-3xl md:text-5xl text-white font-semibold w-full md:w-[476px]">
-          Design beautiful websites
+          Elevate Brands Online.
         </h1>
         <p className="text-white pt-6 md:pt-9 w-full md:w-[377px]">
-          Empower your franchisees and locations to grow with our intelligent
-          dashboards and tools.
+          Establish a powerful, conversion-focused online presence with our unique custom web solutions and eye-catching design.
         </p>
 
         <motion.button
