@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="relative bg-[#1F2B68] text-white min-h-screen px-4 sm:px-6 md:pl-28 overflow-hidden font-sans">
       <motion.div
-        className="pt-20 md:pt-28 w-full"
+        className="pt-10 md:pt-28 w-full"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
