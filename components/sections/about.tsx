@@ -37,19 +37,19 @@ function Counter({ end }: { end: number | string }) {
 
 export default function About() {
   return (
-    <div className="bg-[#1F2B68] py-16 px-4">
+    <div className="bg-[#1F2B68] py-35 px-4">
       <motion.div
         className="flex justify-center text-center text-white text-3xl md:text-5xl"
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="max-w-[594px]">
+        <div className="max-w-[594px] font-semibold">
           <h1>Strategic design over the years</h1>
         </div>
       </motion.div>
 
-      <div className="flex flex-wrap justify-center gap-6 mt-16 text-[#183282]">
+      <div className="flex flex-wrap justify-center gap-6 mt-28 text-[#183282]">
         <motion.div
           className="w-full max-w-[272px] h-[208px] bg-white rounded-2xl flex flex-col items-center justify-center text-center hover:scale-105 transition-transform"
           initial={{ opacity: 0, y: 40 }}

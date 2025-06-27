@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div className="relative bg-[#1F2B68] text-white min-h-[100vh] px-4 sm:px-6 md:pl-28 overflow-hidden">
+    <div className="relative bg-[#1F2B68] text-white min-h-[100vh] px-4 sm:px-6 md:pl-28 overflow-hidden font-sans">
       <motion.div
         className="pt-20 md:pt-28 w-full"
         initial={{ opacity: 0, y: -40 }}
@@ -19,13 +19,13 @@ export default function Hero() {
           <img src="arrow.svg" alt="arrow" className="w-10" />
         </motion.div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-8xl font-bold leading-tight flex flex-wrap md:flex-col md:items-start">
+        <h1 className="text-4xl sm:text-5xl md:text-8xl xl:text-[7rem] font-semibold leading-[0.7] flex flex-wrap md:flex-col md:items-start">
           <span className="hidden md:inline">
             We develop the <span className="text-orange-400">eye</span>
           </span>
-          <span className="hidden md:flex items-center mt-4">
+          <span className="hidden md:flex items-center mt-2 md:mt-6">
             <motion.span
-              className="mt-7"
+              className="mt-6"
               initial={{ x: -10, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ type: "spring", stiffness: 120, delay: 0.3 }}
@@ -37,8 +37,8 @@ export default function Hero() {
           </span>
 
           <span className="md:hidden">
-            We develop the <span className="text-orange-400">eye</span>{" "}
-            catching brands
+            We develop the <span className="text-orange-400">eye</span> catching
+            brands
           </span>
         </h1>
       </motion.div>
@@ -48,7 +48,7 @@ export default function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
       >
-        <p className="max-w-full sm:max-w-[440px] mt-6 sm:mt-10 text-base sm:text-lg md:text-[23px] leading-relaxed font-light">
+        <p className="max-w-full sm:max-w-[480px] mt-6 sm:mt-10 text-base sm:text-lg md:text-[21px] leading-relaxed font-normal">
           Empower your franchises and locations to grow with our intelligent
           dashboards and tools.
         </p>
@@ -65,7 +65,7 @@ export default function Hero() {
             bg-white text-black px-6 py-3 text-base sm:text-lg md:text-xl rounded-xl 
             shadow-[inset_0_-4px_0_rgba(0,0,0,0.2),0_8px_0_0_rgba(0,0,0,0.2)]
             active:translate-y-[4px] active:shadow-[inset_0_-2px_0_rgba(0,0,0,0.2)]
-            transition-all duration-150
+            transition-all duration-150 font-semibold
           "
         >
           Contact Us
@@ -86,7 +86,20 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        className="mt-16 sm:mt-24 md:mt-40 flex justify-center"
+        className="hidden md:block absolute bottom-0 left-20 p-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 1 }}
+      >
+        <img
+          src="./brands.svg"
+          alt="brands"
+          className="w-full max-w-[280px] sm:max-w-[400px] h-auto"
+        />
+      </motion.div>
+
+      <motion.div
+        className="mt-16 sm:mt-24 md:hidden flex justify-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
