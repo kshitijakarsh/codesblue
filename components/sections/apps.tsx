@@ -8,23 +8,23 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-      delayChildren: 0.3
-    }
-  }
+      delayChildren: 0.3,
+    },
+  },
 };
 
 const cardVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 60
+  hidden: {
+    opacity: 0,
+    y: 60,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8
-    }
-  }
+      duration: 0.8,
+    },
+  },
 };
 
 export default function Apps() {
@@ -34,38 +34,33 @@ export default function Apps() {
       alt: "MealOBox - Food Delivery App",
       title: "MealOBox",
       description: "Tiffin Service App",
-      width: 156
+      width: 156,
     },
     {
-      src: "/crypto.png", 
+      src: "/crypto.png",
       alt: "Crypto Trading Platform",
       title: "CryptoTrader",
       description: "Trading Platform",
-      width: 160
+      width: 160,
     },
     {
       src: "/tracker.png",
-      alt: "Fitness Tracker App", 
+      alt: "Fitness Tracker App",
       title: "FitTracker",
       description: "Health & Fitness",
-      width: 156
+      width: 156,
     },
     {
       src: "/trade.png",
       alt: "Trading Dashboard",
-      title: "TradePro", 
+      title: "TradePro",
       description: "Investment Platform",
-      width: 160
-    }
+      width: 160,
+    },
   ];
 
   return (
     <div className="bg-[#1F2B68] py-20 px-4 text-white relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-gradient-to-r from-[#F98C05]/10 to-[#FF6B35]/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-gradient-to-r from-[#7796FD]/10 to-[#4958CC]/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
-      
       <div className="relative z-10 flex justify-center">
         <div className="w-[1100px]">
           <motion.div
@@ -79,11 +74,12 @@ export default function Apps() {
               Apps We Built
             </h1>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
-              Showcasing our mobile application expertise across various industries
+              Showcasing our mobile application expertise across various
+              industries
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -95,16 +91,16 @@ export default function Apps() {
                 key={index}
                 variants={cardVariants}
                 className="group relative"
-                whileHover={{ 
+                whileHover={{
                   y: -20,
                   rotateY: 5,
                   scale: 1.05,
-                  transition: { duration: 0.4, ease: "easeOut" }
+                  transition: { duration: 0.4, ease: "easeOut" },
                 }}
               >
                 <div className="relative w-[240px] h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl transform-gpu transition-all duration-500 group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)]">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/10 to-white/5 backdrop-blur-sm border border-white/20"></div>
-                  
+
                   <div className="relative w-full h-full">
                     <Image
                       src="https://i.pinimg.com/736x/6e/b8/eb/6eb8eb82a2ac5ebc3911c0d9a0b15cf0.jpg"
@@ -114,13 +110,11 @@ export default function Apps() {
                       className="w-full h-full object-cover"
                       priority={index === 0}
                     />
-                    
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                   </div>
 
-                  <motion.div 
-                    className="absolute inset-0 mr-1 -mt-11 flex items-center justify-center p-4"
-                  >
+                  <motion.div className="absolute inset-0 mr-1 -mt-11 flex items-center justify-center p-4">
                     <div className="relative">
                       <Image
                         src={app.src}
@@ -129,7 +123,7 @@ export default function Apps() {
                         height={430}
                         className="object-contain rounded-2xl shadow-xl transition-all duration-300 group-hover:shadow-2xl"
                       />
-                      
+
                       <div className="absolute -inset-1 bg-gradient-to-r from-[#F98C05] to-[#FF6B35] rounded-2xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
                     </div>
                   </motion.div>
@@ -160,9 +154,9 @@ export default function Apps() {
           >
             <motion.button
               className="bg-gradient-to-r from-[#F98C05] to-[#FF6B35] text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              whileHover={{ 
+              whileHover={{
                 boxShadow: "0 20px 40px rgba(249, 140, 5, 0.3)",
-                y: -2
+                y: -2,
               }}
               whileTap={{ scale: 0.98 }}
             >
