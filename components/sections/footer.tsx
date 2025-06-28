@@ -14,7 +14,7 @@ export default function Footer() {
         <span className="text-lg block md:inline mr-0 md:mr-8 mb-3 md:mb-0">
           Send us email at
         </span>
-        <button className="bg-gradient-to-r from-[#FF9A63] to-[#FE804B] px-4 py-1 rounded-xl transition-transform transform duration-200 hover:scale-105 mt-3 md:mt-0">
+        <button className="bg-gradient-to-r from-[#F98C05] to-[#FF6B35] px-4 py-1 rounded-xl transition-transform transform duration-200 hover:scale-105 mt-3 md:mt-0">
           hello@codesblue.com
         </button>
       </motion.div>
