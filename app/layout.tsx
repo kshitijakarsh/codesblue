@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={archivo.variable}>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased bg-[#1F2B68]">{children}</body>
     </html>
   );
 }
