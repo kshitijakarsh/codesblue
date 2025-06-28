@@ -15,7 +15,7 @@ export default function Footer() {
           Send us email at
         </span>
         <button className="bg-gradient-to-r from-[#FF9A63] to-[#FE804B] px-4 py-1 rounded-xl transition-transform transform duration-200 hover:scale-105 mt-3 md:mt-0">
-          example@gmail.com
+          hello@codesblue.com
         </button>
       </motion.div>
 
@@ -25,10 +25,10 @@ export default function Footer() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          <h1 className="text-xl font-semibold mb-5">About Us</h1>
-          <p className="mb-3">27th Street, New York</p>
-          <p className="mb-3">example@gmail.com</p>
-          <p>XX XX XXX XXX</p>
+          <h1 className="text-xl font-semibold mb-5">Contact Info</h1>
+          <p className="mb-3">Remote & Global</p>
+          <p className="mb-3">hello@codesblue.com</p>
+          <p>Available 24/7</p>
         </motion.div>
 
         <motion.div
@@ -37,20 +37,20 @@ export default function Footer() {
           transition={{ delay: 0.2 }}
           className="flex flex-col"
         >
-          <h1 className="text-xl font-semibold mb-5">Services</h1>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+          <h1 className="text-xl font-semibold mb-5">Navigation</h1>
+          <Link href="#home" className="mb-3 hover:text-orange-300 transition">
             Home
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+          <Link href="#about" className="mb-3 hover:text-orange-300 transition">
             About
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
             Services
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+          <Link href="#projects" className="mb-3 hover:text-orange-300 transition">
             Projects
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
+          <Link href="#contact" className="mb-3 hover:text-orange-300 transition">
             Contact
           </Link>
         </motion.div>
@@ -61,18 +61,18 @@ export default function Footer() {
           transition={{ delay: 0.3 }}
           className="flex flex-col"
         >
-          <h1 className="text-xl font-semibold mb-5">Web Design</h1>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            E-commerce
+          <h1 className="text-xl font-semibold mb-5">Web Development</h1>
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            React & Next.js
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            SEO
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            E-commerce Sites
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            Digital Marketing
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            Landing Pages
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            Projects
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            Custom Solutions
           </Link>
         </motion.div>
 
@@ -82,21 +82,18 @@ export default function Footer() {
           transition={{ delay: 0.4 }}
           className="flex flex-col"
         >
-          <h1 className="text-xl font-semibold mb-5">Development</h1>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            Services
+          <h1 className="text-xl font-semibold mb-5">App Development</h1>
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            Mobile Apps
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            Shopify
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            React Native
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            Projects
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            Cross-Platform
           </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            About Us
-          </Link>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            Contact
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            App Store Deploy
           </Link>
         </motion.div>
 
@@ -106,23 +103,29 @@ export default function Footer() {
           transition={{ delay: 0.5 }}
           className="flex flex-col"
         >
-          <h1 className="text-xl font-semibold mb-5">An Odd Bunch</h1>
-          <Link href="/" className="mb-3 hover:text-orange-300 transition">
-            Cayman
+          <h1 className="text-xl font-semibold mb-5">Design Services</h1>
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            Figma Design
           </Link>
-          <Link href="/" className="hover:text-orange-300 transition">
-            Australia
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            UI/UX Design
+          </Link>
+          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+            Prototyping
+          </Link>
+          <Link href="#services" className="hover:text-orange-300 transition">
+            Brand Identity
           </Link>
         </motion.div>
       </div>
 
       <div className="mt-20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
-        <p>© 2025 Your Company. All rights reserved.</p>
+        <p>© 2025 CodesBlue. All rights reserved.</p>
         <div className="flex gap-6">
-          <Link href="/" className="hover:text-white transition">
-            Terms & Services
+          <Link href="/terms" className="hover:text-white transition">
+            Terms of Service
           </Link>
-          <Link href="/" className="hover:text-white transition">
+          <Link href="/privacy" className="hover:text-white transition">
             Privacy Policy
           </Link>
         </div>

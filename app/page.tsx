@@ -1,5 +1,4 @@
 import About from "@/components/sections/about";
-import Certification from "@/components/sections/certification";
 import Cta from "@/components/sections/cta";
 import Faq from "@/components/sections/faq";
 import Features from "@/components/sections/features";
@@ -17,14 +16,25 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
-      <Services />
-      <About />
-      <Certification />
+      <div id="services">
+        <Services />
+      </div>
+      <div id="about">
+        <About />
+      </div>
       <Apps />
-      <Projects />
-      <Testimonials />
-      <Cta />
-      <Faq />
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="testimonials">
+        <Testimonials />
+      </div>
+      <div id="contact">
+        <Cta />
+      </div>
+      <div id="faq">
+        <Faq />
+      </div>
       <Footer />
     </>
   );
