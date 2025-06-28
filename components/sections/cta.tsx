@@ -5,7 +5,7 @@ export default function Cta() {
         <h1 className="text-[54px] md:text-6xl text-white font-semibold leading-[1.2]">
           Have an Idea? Let&apos;s Build and Scale It!
         </h1>
-        <button className="py-4 px-6 rounded-xl bg-gradient-to-r from-[#FF9A63] to-[#FE804B] text-white transition-transform transform duration-200 hover:scale-105 mt-12">
+        <button className="py-4 px-6 rounded-xl bg-gradient-to-r from-[#F98C05] to-[#FF6B35] text-white transition-transform transform duration-200 hover:scale-105 mt-12">
           Book a demo
         </button>
       </div>
