@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -28,7 +29,11 @@ export default function Footer() {
           <h1 className="text-xl font-semibold mb-5">Contact Info</h1>
           <p className="mb-3">Remote & Global</p>
           <p className="mb-3">hello@codesblue.com</p>
-          <p>Available 24/7</p>
+          <div className="flex flex-row gap-5">
+            <BsInstagram className="text-2xl hover:text-orange-400 transition duration-300 cursor-pointer hover:scale-105 hover:rotate-4 hover:rotate-x-4 hover:rotate-y-4 " />
+            <BsLinkedin className="text-2xl hover:text-orange-400 transition duration-300 cursor-pointer hover:scale-105 hover:rotate-4 hover:rotate-x-4 hover:rotate-y-4" />
+            <BsTwitter className="text-2xl hover:text-orange-400 transition duration-300 cursor-pointer hover:scale-105 hover:rotate-4 hover:rotate-x-4 hover:rotate-y-4" />
+          </div>
         </motion.div>
 
         <motion.div
@@ -44,13 +49,22 @@ export default function Footer() {
           <Link href="#about" className="mb-3 hover:text-orange-300 transition">
             About
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Services
           </Link>
-          <Link href="#projects" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#projects"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Projects
           </Link>
-          <Link href="#contact" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#contact"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Contact
           </Link>
         </motion.div>
@@ -62,16 +76,28 @@ export default function Footer() {
           className="flex flex-col"
         >
           <h1 className="text-xl font-semibold mb-5">Web Development</h1>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             React & Next.js
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
-            E-commerce Sites
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
+            Full Stack Development
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Landing Pages
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Custom Solutions
           </Link>
         </motion.div>
@@ -83,16 +109,28 @@ export default function Footer() {
           className="flex flex-col"
         >
           <h1 className="text-xl font-semibold mb-5">App Development</h1>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Mobile Apps
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             React Native
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Cross-Platform
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             App Store Deploy
           </Link>
         </motion.div>
@@ -104,13 +142,22 @@ export default function Footer() {
           className="flex flex-col"
         >
           <h1 className="text-xl font-semibold mb-5">Design Services</h1>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Figma Design
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             UI/UX Design
           </Link>
-          <Link href="#services" className="mb-3 hover:text-orange-300 transition">
+          <Link
+            href="#services"
+            className="mb-3 hover:text-orange-300 transition"
+          >
             Prototyping
           </Link>
           <Link href="#services" className="hover:text-orange-300 transition">

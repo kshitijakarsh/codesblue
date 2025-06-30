@@ -5,7 +5,9 @@ export default function Projects() {
   return (
     <div className="bg-[#1F2B68] py-20 px-4">
       <div className="max-w-[660px] mx-auto text-4xl md:text-6xl text-center text-white leading-tight px-2">
-        <h1 className="text-[54px] font-semibold">Comprised of diverse minds</h1>
+        <h1 className="text-4xl md:text-6xl font-semibold">
+          Comprised of diverse minds
+        </h1>
       </div>
 
       <div className="mt-16 flex justify-center items-center">
@@ -22,11 +24,9 @@ export default function Projects() {
               alt="project1"
               className="w-full h-auto max-w-[646px] max-h-[508px] object-contain"
             />
-            <h1 className="text-white text-2xl font-bold mt-5">
-              GEMINI SKINCARE
-            </h1>
+            <h1 className="text-white text-2xl font-bold mt-5">BLABLA LABS</h1>
             <div className="flex flex-wrap gap-3 mt-4">
-              {["Copywriting", "Brand Content", "E-Commerce"].map((tag, i) => (
+              {["Copywriting", "Brand Content", "Podcast"].map((tag, i) => (
                 <motion.h1
                   key={i}
                   className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200"
@@ -52,10 +52,10 @@ export default function Projects() {
               className="w-full h-auto max-w-[484px] max-h-[508px] object-contain"
             />
             <h1 className="text-white text-2xl font-bold mt-5">
-              SILV PEANUT BUTTER
+              SNEAKER STORE
             </h1>
             <div className="flex flex-wrap gap-3 mt-4">
-              {["Copywriting", "Brand Content", "E-Commerce"].map((tag, i) => (
+              {["Sneakers", "E-Commerce", "Shoes"].map((tag, i) => (
                 <motion.h1
                   key={i}
                   className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200"
@@ -85,10 +85,10 @@ export default function Projects() {
               className="w-full h-auto max-w-[484px] max-h-[508px] object-contain"
             />
             <h1 className="text-white text-2xl font-bold mt-5">
-              GOODROOT PIZZA
+              CRYPTO TRADING
             </h1>
             <div className="flex flex-wrap gap-3 mt-4">
-              {["Copywriting", "Brand Content", "E-Commerce"].map((tag, i) => (
+              {["Crypto", "Trading", "Investing", "UI/UX"].map((tag, i) => (
                 <motion.h1
                   key={i}
                   className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200"
@@ -113,11 +113,9 @@ export default function Projects() {
               alt="project2"
               className="w-full h-auto max-w-[646px] max-h-[508px] object-contain"
             />
-            <h1 className="text-white text-2xl font-bold mt-5">
-              OLIPOP DRINKS
-            </h1>
+            <h1 className="text-white text-2xl font-bold mt-5">NFT MARKETPLACE</h1>
             <div className="flex flex-wrap gap-3 mt-4">
-              {["Copywriting", "Brand Content", "E-Commerce"].map((tag, i) => (
+              {["NFT", "Marketplace", "Crypto", "Web3"].map((tag, i) => (
                 <motion.h1
                   key={i}
                   className="bg-white text-[#1F2B68] px-3 py-1 rounded-full text-sm font-medium shadow-sm border border-gray-200"

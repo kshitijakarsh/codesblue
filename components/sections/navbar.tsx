@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -31,10 +32,10 @@ export default function Navbar() {
   return (
     <header className="bg-[#1F2B68] text-white px-5 md:px-20 py-6 relative z-50">
       <div className="flex items-center justify-between">
-        <div className="text-2xl font-bold tracking-tight hover:scale-105 transition-transform duration-200">
+        <Link href="/" className="text-2xl font-bold tracking-tight hover:scale-105 transition-transform duration-200">
           <span className="text-white">Codes</span>
           <span className="text-transparent bg-gradient-to-r from-[#F98C05] to-[#FF6B35] bg-clip-text">Blue</span>
-        </div>
+        </Link>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
