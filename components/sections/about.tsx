@@ -58,9 +58,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Counter end={400} />
+          <Counter end={8} />
           <p className="text-lg mt-2 w-[200px]">
-            Talented people ready to bring your vision
+            Skilled developers ready to bring your vision
           </p>
         </motion.div>
 
@@ -70,9 +70,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Counter end={15} />
+          <Counter end={3} />
           <p className="text-lg mt-2 w-[200px]">
-            Years of experience working with tech
+            Years of combined experience in tech
           </p>
         </motion.div>
 
@@ -82,8 +82,8 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Counter end={40} />
-          <p className="text-lg mt-2 w-[200px]">Offices in the United States</p>
+          <Counter end={2} />
+          <p className="text-lg mt-2 w-[200px]">Locations serving clients nationwide</p>
         </motion.div>
 
         <motion.div
@@ -92,9 +92,9 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Counter end={"3K+"} />
+          <Counter end={25} />
           <p className="text-lg mt-2 w-[200px]">
-            Pixel perfect projects designed
+            Successful projects completed
           </p>
         </motion.div>
       </div>
