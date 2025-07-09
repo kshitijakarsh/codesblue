@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.codesblue.com
+
+# Sitemaps
+Sitemap: https://www.codesblue.com/sitemap.xml
