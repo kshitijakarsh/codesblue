@@ -33,9 +33,13 @@ export default function Footer() {
           <p className="mb-3">Remote & Global</p>
           <p className="mb-3">contact@codesblue.com</p>
           <div className="flex flex-row gap-5">
-            <BsInstagram className="text-2xl hover:text-orange-400 transition duration-300 cursor-pointer hover:scale-105 hover:rotate-4 hover:rotate-x-4 hover:rotate-y-4 " />
+            <Link href="https://www.instagram.com/codesblue25" target="_blank">
+              <BsInstagram className="text-2xl hover:text-orange-400 transition duration-300 cursor-pointer hover:scale-105 hover:rotate-4 hover:rotate-x-4 hover:rotate-y-4 " />
+            </Link>
             <BsLinkedin className="text-2xl hover:text-orange-400 transition duration-300 cursor-pointer hover:scale-105 hover:rotate-4 hover:rotate-x-4 hover:rotate-y-4" />
-            <BsTwitter className="text-2xl hover:text-orange-400 transition duration-300 cursor-pointer hover:scale-105 hover:rotate-4 hover:rotate-x-4 hover:rotate-y-4" />
+            <Link href={"https://twitter.com/anujxforge"} target="_blank">
+              <BsTwitter className="text-2xl hover:text-orange-400 transition duration-300 cursor-pointer hover:scale-105 hover:rotate-4 hover:rotate-x-4 hover:rotate-y-4" />
+            </Link>
           </div>
         </motion.div>
 
