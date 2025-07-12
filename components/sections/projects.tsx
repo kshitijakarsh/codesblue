@@ -130,7 +130,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="text-center pt-15 mt-12">
+      {/* <div className="text-center pt-15 mt-12">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
@@ -138,7 +138,7 @@ export default function Projects() {
         >
           See all Projects
         </motion.button>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { BiPhoneCall } from "react-icons/bi";
 
 const fadeInVariants: Variants = {
@@ -16,6 +17,12 @@ const fadeInVariants: Variants = {
 };
 
 export default function Hero() {
+  const handleContactClick = () => {
+    const element = document.querySelector("#contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="relative bg-[#1F2B68] text-white min-h-screen overflow-hidden">
       <div className="px-4 sm:px-6 md:pl-28 pb-8 md:pb-0">
@@ -26,7 +33,6 @@ export default function Hero() {
           animate="visible"
           viewport={{ once: true }}
         >
-
           <motion.h1
             className="hidden md:block font-bold text-[56px] lg:text-[84px] xl:text-[96px] leading-[1.1] max-w-6xl tracking-tight"
             initial={{ opacity: 0, y: 30 }}
@@ -57,7 +63,7 @@ export default function Hero() {
                     className="w-16 md:w-30 opacity-90"
                   />
                 </motion.div>
-                For {" "}
+                For{" "}
                 <span className="ml-4 text-transparent bg-gradient-to-r from-[#F98C05] to-[#FF6B35] bg-clip-text font-extrabold">
                   Digital Impact
                 </span>
@@ -107,8 +113,14 @@ export default function Hero() {
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.2 }}
           >
-            <BiPhoneCall className="w-6 h-6 mr-2" />
-            Book a Call
+            <Link
+              href="#cta"
+              className="flex items-center"
+              onClick={handleContactClick}
+            >
+              <BiPhoneCall className="w-6 h-6 mr-2" />
+              Book a Call
+            </Link>
           </motion.button>
         </motion.div>
 
