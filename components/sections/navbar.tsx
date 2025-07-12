@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -10,21 +11,21 @@ export default function Navbar() {
     { name: "Projects", href: "#projects" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "About", href: "#about" },
-    { name: "FAQ", href: "#faq" }
+    { name: "FAQ", href: "#faq" },
   ];
 
   const handleClick = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false); // Close mobile menu after clicking
     }
   };
 
   const handleContactClick = () => {
-    const element = document.querySelector('#contact');
+    const element = document.querySelector("#contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     setIsOpen(false);
   };
@@ -32,10 +33,26 @@ export default function Navbar() {
   return (
     <header className="bg-[#1F2B68] text-white px-5 md:px-20 py-6 relative z-50">
       <div className="flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold tracking-tight hover:scale-105 transition-transform duration-200">
-          <span className="text-white">Codes</span>
-          <span className="text-transparent bg-gradient-to-r from-[#F98C05] to-[#FF6B35] bg-clip-text">Blue</span>
-        </Link>
+        <div className="flex  items-center gap-3 ">
+          <div>
+            <Image
+              src="/favicon.svg"
+              alt="CodesBlue Logo"
+              width={150}
+              height={50}
+              className="h-10 w-auto rounded-full p-1"
+            />
+          </div>
+          <Link
+            href="/"
+            className="text-2xl font-bold tracking-tight hover:scale-105 transition-transform duration-200"
+          >
+            <span className="text-white">Codes</span>
+            <span className="text-transparent bg-gradient-to-r from-[#F98C05] to-[#FF6B35] bg-clip-text">
+              Blue
+            </span>
+          </Link>
+        </div>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -71,7 +88,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <button 
+          <button
             onClick={handleContactClick}
             className="relative bg-gradient-to-r from-[#F98C05] to-[#FF6B35] text-white px-6 py-3 rounded-2xl font-semibold shadow-lg overflow-hidden hover:scale-105 hover:-translate-y-0.5 transition-all duration-200"
           >
@@ -93,8 +110,8 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
-            
-            <button 
+
+            <button
               onClick={handleContactClick}
               className="mt-4 bg-gradient-to-r from-[#F98C05] to-[#FF6B35] text-white px-6 py-3 rounded-2xl font-semibold shadow-lg w-full hover:scale-102 transition-transform duration-200"
             >
